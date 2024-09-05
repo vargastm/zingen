@@ -1,0 +1,67 @@
+.button {
+  border: 0;
+  background-color: transparent;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+
+  cursor: pointer;
+
+  border-radius: .5rem;
+  font: var(--fw-md) var(--fs-base)/1.5rem var(--ff-sans);
+
+  background: var(--text-color-primary);
+  color: var(--surface-color);
+}
+
+.button:hover {
+  background: linear-gradient(90deg, var(--brand-color-secondary) 0%, var(--brand-color-primary) 100%);
+}
+
+.button-sm {
+  padding: .5rem 1rem;
+  font-size: var(--fs-sm);
+}
+
+.button-md {
+  padding: .75rem 1.5rem;
+  font-size: var(--fs-base);
+}
+
+
+.button-lg {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+}
+
+.button[aria-label] {
+  position: relative;
+  
+  &::before {
+    content: "";
+    position: absolute;
+    border-radius: inherit;
+    inset: 1.5px;
+    background-color: var(--bg-color);
+  }
+
+  &::after {
+    content: attr(aria-label);
+    background: var(--text-color-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    position: relative;
+    z-index: 1;
+  }
+
+  &:hover {
+    &::after {
+      background: linear-gradient(90deg, var(--brand-color-secondary) 0%, var(--brand-color-primary) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+    }
+  }
+}
