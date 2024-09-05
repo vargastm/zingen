@@ -48,7 +48,7 @@ html {
 }
 
 body {
-  background-color: var(--bg-color);
+  background-color: var(--surface-color);
 }
 
 h1,
