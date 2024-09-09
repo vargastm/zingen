@@ -35,7 +35,8 @@
 
   --py-base: 1rem;
   --py-lg: 1.5rem;
-  --px-lg: 3rem;
+  --py-xl: 3rem;
+
   --px-lg: 1.5rem;
 }
 
@@ -93,6 +94,11 @@ ul[role='list'] {
   list-style: none;
 }
 
+img {
+  max-width: 100%;
+  display: inline-block;
+}
+
 @media (width >= 80em) {
   :root {
     --fs-lg: 2rem;
@@ -101,7 +107,8 @@ ul[role='list'] {
     
     --py-base: 1.5rem;
     --py-lg: 2.5rem;
-    --px-lg: 5rem;
+    --py-xl: 5rem;
+    
     --px-lg: 2rem;
   }
 }
